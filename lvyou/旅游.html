@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="icon" href="img/fLOGO.png">
+    <style>
+        * { margin:0; padding:0;}
+        html,body { width:100%;color: #FFFFFF; font-size: 16px; font-weight: 500; font-family: "微软雅黑";}
+
+        /* 公用*/
+        a { text-decoration: none; }
+        li { list-style: none;}
+        .clear {
+            zoom: 1;
+            clear: both;
+        }
+        .clear:after{
+            content: ' ';
+            display: block;
+            height:0;
+            visibility: hidden;
+            clear: both;
+        }
+
+        #header { }
+        #topbar { background: #2c3e50;}
+        #topbar div { width:1173px; margin:0 auto; height:42px; line-height:42px; }
+        #topbar div span { padding:0 10px 0 20px; height:42px; border-right:1px solid #273646;
+            display:inline-block;}
+        #topbar div span.bg1 { background: url("img/1&2.png") no-repeat left 0 top 50%; }
+        #topbar div span.bg2 { background: url("img/3.png") no-repeat left 0 top 50%; }
+        #topbar div a { color: #1dd2af; background: no-repeat left 0 top 50%;}
+        #topbar div>a { float:right; width:42px; height:42px; border-right:1px solid #273646; }
+
+
+        #nav { width:1130px; height:57px; margin: 18px auto;position: relative; }
+        #nav div { width:155px; height:57px;background: url("img/logo.png") no-repeat left 0 top 50%;}
+        #nav a { float:right; margin-right: 35px; display: block; height:57px; line-height: 57px;
+            color: #788695; font-size: 18px;}
+        #nav #box { position: absolute; left: 1100px;top:10px; width:35px;height:35px;
+            border: 1px solid #2c3e50;border-radius:50%;background: url("img/seach.png") no-repeat right 50% top 50%;
+        }
+
+        #banner { position:relative;height:700px;background: #ccc;}
+        #banner img { height:700px;width: 100%; margin-top: -45px;}
+        #banner #img {overflow: hidden; }
+        /*#banner img:hover{ filter:alpha(opacity=40); opacity: 0.4; }*/
+        #banner button { width:80px;height:80px;background: rgba(79,99,111,0.7);border: none;}
+        #banner button.FL {position: absolute; left:0; top:50%; z-index: 10;
+            background: url("img/l.png") #5b747e no-repeat left 50% top 50%;}
+        #banner button.FR {position: absolute; right:0; top:50%;z-index: 11;
+            background: url("img/r.png") #5b747e no-repeat left 50% top 50%;}
+        #banner .box { width:100%; height:230px; text-align:center; position: absolute;
+            top:270px;z-index: 5;
+        }
+        #banner .box h2 { height:80px; line-height: 80px; }
+        #banner .box p { height:45px;margin-bottom: 35px; line-height: 45px; }
+        #banner .box span { height:60px; padding:0 25px; display: inline-block;line-height: 60px;
+            border:2px solid #ffffff}
+
+        #holidys { height:107px; border:1px solid #3a4e61; background: #2c3e50; color: #9fb0c0}
+        #holidys div { width: 1173px; margin: 0 auto;}
+        #holidys div p { width:170px;height:107px;margin-top: 30px; font-size: 16px;}
+        #holidys div p strong { font-size: 24px;color: #FFFFFF;}
+        #holidys div form { float: right;}
+        #holidys div form input { width:328px; height:50px;font-size: 20px; border: none;padding-left:10px;  }
+        #holidys .where { background: url("img/where.png") #ffffff no-repeat right 10px top 50%;}
+        #holidys .when { background: url("img/when.png") #ffffff no-repeat right 10px top 50%;}
+        #holidys div form input.sub { width:110px; background: #1dd2af;border: none;color: #FFFFFF;}
+        #holidys b { width:120px; height:107px; text-align: center;display: inline-block;font-size: 20px;}
+
+        #content {color:#6c6c6c;}
+        #content .title { padding: 80px 0 150px 0; }
+        #content .title>p,#content .holidays_type>p{ margin-bottom: 80px;text-align: center;}
+        #content .title>h3,#content .holidays_type>h3 { text-align: center; color: #2c3e50;}
+        #content #move { height:255px; position: relative; overflow: hidden;}
+        #content #move div { width:220px;height:250px; margin-right:20px; border: 1px solid #eeeeee;
+            background:url("img/xia.png") no-repeat right 10px top 90% #eeeeee;display: inline-block; text-align: left; position: absolute;}
+        #content #move div img { height:195px;width:220px;}
+        #content #move div h4 { padding: 6px 0 0 20px;}
+        #content #move div p {padding-left:20px; }
+
+        #content .holidays_type {background:url("img/typeBG.png") no-repeat;background-size:100% 450px;
+            padding-top: 70px; height: 450px; color: #FFFFFF; }
+        #content .holidays_type h3 {color: #FFFFFF; margin-bottom: 10px; }
+        #content #holidays_icon { width:1173px;height: 200px; margin: 0 auto;}
+        #content #holidays_icon div { float: left; width:160px; height:160px;border:2px solid #ccc;
+            border-radius:50%;margin-right: 30px;position: relative; }
+        #content #holidays_icon div p { position: absolute; top:170px; text-align: center;width:160px;}
+
+        #content #happy_clients { height:340px;}
+        #content #happy_clients h3 { text-align: center; margin-top:65px; }
+        #content #happy_clients p { text-align: center;margin-bottom:50px;}
+        #content #happy_clients #happy_clients_options { height:147px;position: relative;overflow: hidden;}
+        #content #happy_clients #happy_clients_options div { width:475px; height:145px;border:1px solid #dedede;
+            float: left;position: absolute;
+        }
+
+        #footer { height:450px; background: #2c3e50;}
+        #footer ul { width:1173px; margin: 0 auto;}
+        #footer ul li { float:left; width:290px; height:235px; border-bottom: 1px solid #394c5f}
+    </style>
+    <script>
+        window.onload=function () {
+            var oMove=document.getElementById('move');
+            var aDiv=oMove.getElementsByTagName('div');
+            var aImg=oMove.getElementsByTagName('img');
+            var oBox=document.getElementById('happy_clients_options');
+            var aBox=oBox.getElementsByTagName('div');
+            var oImg=document.getElementById('banner').getElementsByTagName('img')[0];
+            var b=1;
+
+            for (var i=1;i<aImg.length+1;i++){
+                if(b==aDiv.length/2+1){
+                    b=1;
+                }
+                aImg[i-1].src='img/p'+b+'.png';
+                aDiv[i-1].style.left=(aDiv[i-1].offsetWidth+20)*(i-1)+'px';
+                b++;
+            }
+            time=setInterval(function () {
+                move(aDiv)
+            },30);
+
+            function move(obj) {
+                for(var i=0;i<obj.length;i++){
+                    obj[i].style.left=obj[i].offsetLeft-2+'px';
+                    if(obj[0].offsetLeft<=-(obj[0].offsetWidth+20)*(obj.length/2)){
+                        for(var j=0;j<obj.length;j++){
+                            obj[j].style.left=(obj[j].offsetWidth+20)*j+'px'
+                        }
+                    }
+                }
+            }
+            oMove.onmouseover=function () {
+                clearInterval(time)
+            };
+            oMove.onmouseout=function () {
+                time=setInterval(function () {
+                    move(aDiv)
+                },30);
+            }
+
+            for (var i=0;i<aBox.length;i++){
+                aBox[i].style.left=(aBox[i].offsetWidth+20)*i+'px'
+            }
+            setInterval(function () {
+                move(aBox)
+            },30);
+
+            oImg.onmouseover=function () {
+                this.style.opacity=0.4;
+            };
+            document.getElementById('banner').onmouseout=function () {
+                oImg.style.opacity=1;
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="header">
+
+    <div id="topbar">
+        <div>
+            <span class="bg1">Agent Login</span>
+            <span class="bg1">Customer Login</span>
+            <span class="bg2">Not a Member?<a href="javascript:;">Register</a></span>
+            <span>Call Us Now:888-123-4567</span>
+            <a href="javascript:;" style="background: url('img/7.png') no-repeat left 50% top 50%"></a>
+            <a href="javascript:;" style="background: url('img/6.png') no-repeat left 50% top 50%"></a>
+            <a href="javascript:;" style="background: url('img/5.png') no-repeat left 50% top 50%"></a>
+            <a href="javascript:;" style="background: url('img/4.png') no-repeat left 50% top 50%"></a>
+        </div>
+    </div>
+
+    <div id="nav" class="clear" >
+        <div id="box"></div>
+        <a href="javascript:;">home</a>
+        <a href="javascript:;">home</a>
+        <a href="javascript:;">home</a>
+        <a href="javascript:;">home</a>
+        <a href="javascript:;">home</a>
+        <a href="javascript:;" style="color: #1dd2af">home</a>
+        <div id="logo"></div>
+    </div>
+    <div id="banner">
+         <div class="box">
+            <h2>TO TRAVEl IS TO LIVE</h2>
+            <p>You Don't Need Magic to Disappear,All you need is a destination.</p>
+             <span>SHOW ON THE MAP</span>
+             <span>MORE INFO</span>
+         </div>
+        <div id="img"><img src="img/Layer2.png" alt=""></div>
+        <button class="FL"></button>
+        <button class="FR"></button>
+    </div>
+
+    <div id="holidys">
+        <div>
+            <form action="#">
+                <b>Where</b><input type="text" placeholder="distination"  class="where">
+                <b>When</b><input type="text" placeholder="select date" class="when">
+                <input type="submit" value="Search" class="sub">
+            </form>
+            <p>FIND YOUR<br><strong>HOLIDYS</strong></p>
+        </div>
+    </div>
+</div>
+
+<div id="content">
+    <div class="title">
+        <h3>SPECIAL</h3>
+        <p>段落</p>
+        <div id="move">
+            <div>
+                <img src="" alt="">
+                <h4>标题</h4>
+                <p>段落</p>
+            </div>
+            <div>
+                <img src="" alt="">
+                <h4>标题</h4>
+                <p>段落</p>
+            </div>
+            <div>
+                <img src="" alt="">
+                <h4>标题</h4>
+                <p>段落</p>
+            </div>
+            <div>
+                <img src="" alt="">
+                <h4>标题</h4>
+                <p>段落</p>
+            </div>
+            <div>
+                <img src="" alt="">
+                <h4>标题</h4>
+                <p>段落</p>
+            </div>
+            <div>
+                <img src="" alt="">
+                <h4>标题</h4>
+                <p>段落</p>
+            </div>
+            <div>
+                <img src="" alt="">
+                <h4>标题</h4>
+                <p>段落</p>
+            </div>
+            <div>
+                <img src="" alt="">
+                <h4>标题</h4>
+                <p>段落</p>
+            </div>
+            <div>
+                <img src="" alt="">
+                <h4>标题</h4>
+                <p>段落</p>
+            </div>
+            <div>
+                <img src="" alt="">
+                <h4>标题</h4>
+                <p>段落</p>
+            </div>
+            <div>
+                <img src="" alt="">
+                <h4>标题</h4>
+                <p>段落</p>
+            </div>
+            <div>
+                <img src="" alt="">
+                <h4>标题</h4>
+                <p>段落</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="holidays_type">
+        <h3>HOLIDAYS TYPE</h3>
+        <p>get explore your dream to travel the whorld!</p>
+        <div id="holidays_icon" class="clear">
+            <div style="background: url('img/T1.png') no-repeat left 50% top 50%"><img src="" alt=""><p>Cruise</p></div>
+            <div style="background: url('img/T2.png') no-repeat left 50% top 50%"><img src="" alt=""><p>City Breaks</p></div>
+            <div style="background: url('img/T3.png') no-repeat left 50% top 50%"><img src="" alt=""><p>Honeymoon</p></div>
+            <div style="background: url('img/T4.png') no-repeat left 50% top 50%"><img src="" alt=""><p>Adventure</p></div>
+            <div style="background: url('img/T5.png') no-repeat left 50% top 50%"><img src="" alt=""><p>Safari</p></div>
+            <div style="background: url('img/T6.png') no-repeat left 50% top 50%"><img src="" alt=""><p>Beach</p></div>
+        </div>
+    </div>
+
+    <div id="happy_clients">
+        <h3>HAPPY CLIENTS</h3>
+        <p>what customer......</p>
+        <div id="happy_clients_options" class="clear">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+
+
+<div id="footer">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <p></p>
+    <p></p>
+</div>
+</body>
+</html>
