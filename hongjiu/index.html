@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style id="css">
+        div,h3,h4,p,img,a,ul,li,b,span,button,html,body { margin:0; padding:0; }
+        ul { list-style:none;}
+        a { text-decoration: none; }
+        html,body { width:100%; background: #010100; font: 12px '微软雅黑'; }
+        .clear { zoom: 1; clear:both; }
+        .clear:after { content: '.'; display:block; height:0; visibility:hidden; clear:both; }
+        /*div { border:1px solid red;}*/
+        #header,#nav ul,#banner,#content1,#content2,#footer{ width:82%; margin: 0 auto;}
+
+        /*layou*/
+        #header { height:150px; background: url(img/head.png) no-repeat; background-size: 100% 100%}
+        #nav { width:100%; height:40px; background: url(img/nav.png) no-repeat; background-size: 100% 100%;}
+        #nav ul { height:40px; background: url(img/nav_L.png) 0 3px no-repeat,url(img/nav_R.png) right 3px no-repeat }
+        #banner { height:250px;position:relative; margin-top: 10px;-webkit-perspective:800px;perspective:800px; }
+        #content1 { height:560px;margin-top: 10px; }
+        #content2 { height:220px;margin-top: 10px; }
+        #footer_nav { width:100%; height:40px; background: #3c0101; margin-top:10px; }
+        #footer {width:100%; height:100px; background: #190101; padding-top: 15px; }
+
+        #nav ul li {  float: left; width:13%;}
+        #nav ul li a { width: 100%; text-align:center; height:40px; display: inline-block; font: 100 18px/40px '微软雅黑'; color:#ffffbd; letter-spacing:2px;  }
+        #nav ul li:nth-of-type(1){ width:10%; margin-left:50px;}
+        #nav ul li a:hover{ background: #ffe401; }
+        #banner div { color:#FFFFFF; font-size: 18px; display: inline-block; position: absolute; bottom:10px; right:60px; z-index: 1000;}
+        #banner div>button { color:#ccc; font-size: 25px; margin: 0 10px; background: none; border: none;}
+        #banner ul { width:980px; height:100%; margin: 0 auto;}
+        #banner ul li { width:20px; height:100%;position: relative;float:left;-webkit-transform-origin:center center -125px;transform-origin:center center -125px;
+            -webkit-transform-style: preserve-3d; transform-style: preserve-3d;transition: 5s;list-style: none; }
+        #banner ul li a { width:100%; height:100%; display: block ;position: absolute; overflow: hidden;}
+        #banner ul li span { width:250px; height:250px; position: absolute; display: block; background: #ccc;}
+        #banner ul li a:nth-of-type(1) { background: url(img/banner1.png) no-repeat; }
+        #banner ul li a:nth-of-type(2) { -webkit-transform-origin:top;-webkit-transform: translateZ(-250px) rotateX(90deg);background: url(img/banner2.png) no-repeat;
+            transform-origin:top;transform: translateZ(-250px) rotateX(90deg);}
+        #banner ul li a:nth-of-type(3) { -webkit-transform-origin:center center;-webkit-transform: translateZ(-250px) rotateX(180deg);background: url(img/banner3.png) no-repeat;
+            transform-origin:center center;transform: translateZ(-250px) rotateX(180deg);}
+        #banner ul li a:nth-of-type(4) { -webkit-transform-origin:bottom;-webkit-transform:translateZ(-250px) rotateX(-90deg);background: url(img/banner4.png) no-repeat;
+            transform-origin:bottom;transform:translateZ(-250px) rotateX(-90deg);}
+        #banner ul li span:nth-of-type(1) { -webkit-transform-origin:left;-webkit-transform:rotateY(90deg); transform-origin:left;transform:rotateY(90deg);}
+        #banner ul li span:nth-of-type(2) { -webkit-transform-origin:right;-webkit-transform:rotateY(-90deg);right:0; transform-origin:right;transform:rotateY(-90deg);}
+
+        .side { width:30%;float:left; height:100%; overflow: hidden;}
+        .side .culture { background: #190101; border-top: 1px solid #190101; }
+        .side .culture a:hover { text-decoration: underline; }
+        .side .culture p { height:28px; font:500 16px/25px '微软雅黑'; color:#b24e03; background: #2d1606; margin-top:10px; border: 1px solid #2d1606; border-top-left-radius:10px; }
+        .side .culture p a { color: #b24e03; font-weight: bolder; text-align:center; display: inline-block; width:48px;height:23px; margin:3px 1px 0 0;border: 1px solid #4b1e01; border-radius:4px;
+            background: -webkit-linear-gradient(#4b1e01,#773002,#471b00); background: -moz-linear-gradient(#4b1e01,#773002,#471b00); background:linear-gradient(#4b1e01,#773002,#471b00);}
+        .side .culture p a:nth-of-type(1) { margin-left:15px; }
+        .side .culture p a:hover { background: #f55e03; }
+        .side .culture p span { float:right; color: #190101;display: inline-block; height:25px; margin-top:3px; }
+        .side .culture ul { height:150px; margin:10px 0 0 15px;  font-size: 13px;}
+        .side .culture ul li { height:25px; line-height: 25px;}
+        .side .culture ul li a { display: block;height:25px;color:#9e4601;}
+        .side .culture ul:nth-of-type(2){display: none; }
+        .side .culture .one{ width:75px; height:18px; background: #3a2313; float: right;border: 1px solid #3a2313; border-top-left-radius:10px;}
+        .side .culture .one a{ height:18px;color:#713302; display: block; text-align: center; font:13px/20px '微软雅黑'; }
+        .side .culture2 div {width:99%;height:30px; font:500 16px/25px '微软雅黑'; color:#b24e03; background: #2d1606; margin-top:10px; border: 1px solid #2d1606; border-top-left-radius:10px; }
+        .side .culture2 div b { margin-left:15px;height:30px;display:inline-block;line-height: 30px; }
+        .side .culture2 div a{ width:75px; height:30px; float: right;display: block;color:#713302;text-align: center; font:13px/30px '微软雅黑'; }
+        .side .ad { height:110px; margin: 15px 0 12px 0; position: relative; overflow: hidden;}
+        .side .ad img { position: absolute; right: 0; bottom:0; width: 100%; }
+        .side .ad div {position: absolute;right: 0; top:0;height:60px;width:50px; background: url(img/ad_top.png) no-repeat right top; }
+        .side .ad div b { position: absolute; right: 0; top:0; color:#fd8300;font-size:18px; -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);transform: rotate(45deg);}
+        .side .ad p { width:215px; height:25px; background: rgba(0,0,0,0.3); position: absolute; bottom:10px;left:0; color:#cbc9c7; font-size:14px; line-height:25px;  }
+        .content { width:69%; float:right; height:100%; background: url(img/con_LT_.png) no-repeat 0 0,
+            url(img/con_RT.png) no-repeat right 0,url(img/con_LB.png) no-repeat 0 bottom,url(img/con_RB.png) no-repeat right bottom,#190101;}
+        .content>p { width:40%; height:30px; margin: 5px auto 45px; background: url(img/cen_L.png) no-repeat 0 0,url(img/cen_R.png) no-repeat right 0,
+            -webkit-linear-gradient(left,#190101,#472208,#190101); color: #fd6f03; font-size: 22px; line-height: 30px; text-align: center; }
+        .content div { width:95%;height:219px; border-top:1px solid #974503; margin: 0 auto; position: relative; }
+        .content div b,.content div>a,#content2 .L div b,#content2 .L div>a { position: absolute; color:#783403; font-size: 18px;  background: #190101; text-align: center; height:20px; top:-14px;
+            font-weight: normal; padding: 0 3px;}
+        .content div b { left:50px;}
+        .content div>a { right: 0; }
+        .content div>a:hover { text-decoration:underline; }
+        .content div ul { width:100%; height:165px; margin:25px 0 25px 0; }
+        .content div ul li { width:22.5%;height:165px; float:left; margin-left:3%; }
+        .content div ul li:nth-of-type(1) { margin-left:0; }
+        .content div ul li img { width:100%;height:140px; border:2px solid #803903; }
+        .content div ul li p { margin-top:10px; font-size: 14px; text-align: center; height:15px; line-height: 15px; color:#dc6003; }
+        #content2 { border: 1px solid #d00202; background: #f6e994;}
+        #content2 .L { width:30%; height:220px; float: left; }
+        #content2 .L div { height:0; border-bottom: 1px solid #b24e03; margin: 20px 2px;position: relative;}
+        #content2 .L div b { left:10px; background: #f6e994; color:#8c0101;  }
+        #content2 .L div a { right: 0; background: #f6e994; }
+        #content2 .L ul { margin-left: 20px; }
+        #content2 .L ul li { margin-bottom: 6px; display: block; }
+        #content2 .L ul li a { color: #b24e03; font-size: 14px; }
+        #content2 .L ul li a:hover { text-decoration: underline; }
+        #content2 .R { width:69%; height:220px; border:1px solid #d00202; float: right; position: relative; background: url(img/hot_T.png) no-repeat -1px 0;}
+        #content2 .R span { width:40px; height:40px; font-size: 12px; position: absolute;left: -8px;top:-4px; line-height: 40px;text-align: center; color: #ffdfd7;
+            -webkit-transform: rotate(-48deg); -moz-transform: rotate(-48deg); transform: rotate(-48deg);}
+        #content2 .R .wrap { width:98%; margin: 35px auto; }
+        #content2 .R .wrap div { width:50%; height:150px; float: left; }
+        #content2 .R .wrap div>a{ float: left;}
+        #content2 .R .wrap div p { margin-top: 10px; }
+        #content2 .R .wrap div p a {width: 55%; float: right; font-size: 16px; color: #d00202;margin-right: 5px; }
+        #content2 .R .wrap div p a:hover { color: #f5b303; }
+        #content2 .R .wrap div ul { width: 55%; float: right; border-top:1px solid #b24e03; padding-top: 5px; margin-right: 5px; }
+        #content2 .R .wrap div ul li { margin-top: 10px;color: #1e1e1e; font-weight: 600; font-size: 13px; }
+        #footer_nav ul { text-align: center; }
+        #footer_nav ul li { height:40px; }
+        #footer_nav ul li a {font-size: 13px;color: #fdd859; display: inline-block; height: 15px; margin-top: 12px; padding: 0 14px; border-right: 1px solid #fdd859;}
+        #footer_nav ul li a:hover { text-decoration: underline; }
+        #footer_nav ul li a:nth-of-type(7) { border: none; }
+        #footer h3,#footer h4 { text-align: center;color: #fdfcfc; margin-bottom: 15px; }
+    </style>
+    <script>
+        window.onload=function () {
+            var oBanner=document.getElementById('banner');
+            var oUl=oBanner.getElementsByTagName('ul')[0];
+            var oDiv=document.getElementById('btn');
+            var aBtn=oDiv.getElementsByTagName('button');
+            var oSpan=oDiv.getElementsByTagName('span')[0];
+            var oCss=document.getElementById('css');
+            var aLi=oUl.getElementsByTagName('li');
+            var iIndex=0;
+            var sCss='';
+            var iHeig=20;
+            var iLength=oUl.offsetWidth/iHeig;
+            alert('建议用谷歌浏览器查看');
+
+            function creat() {
+                var li = '';
+                for (var i = 0; i <iLength; i++) {
+                    li += '<li><a href=""></a><a href=""></a><a href=""></a><a href=""></a><span></span><span></span></li>';
+                    i>iLength/2?iIndex--:iIndex++;
+                    sCss+='#banner ul li:nth-of-type('+(i+1)+'){z-index:'+iIndex+'}';
+                }
+                oUl.innerHTML = li;
+                oCss.innerHTML+=sCss;
+                for (var j = 0; j < aLi.length; j++) {
+                    var b=j;
+                    for(var k=0;k<4;k++){
+                        aLi[b].getElementsByTagName('a')[k].style.backgroundPosition=b*-iHeig+'px '+'0px';
+                    }
+                }
+            }
+            creat();
+            var d=0;
+            aBtn[1].onclick=move2;
+            aBtn[0].onclick=move;
+            function move2() {
+                aBtn[1].onclick=null;
+                aBtn[0].onclick=move;
+                d++;
+                for(var i=0;i<aLi.length;i++){
+                    aLi[i].style.webkitTransform='rotateX('+d%4*-90+'deg)';
+                    aLi[i].style.transform='rotateX('+d%4*-90+'deg)';
+                    aLi[i].style.transition='0.6s '+i*40+'ms';
+                }
+                aLi[aLi.length-1].addEventListener('transitionend',function () {
+                    aBtn[1].onclick=move2;
+                },false);
+                oSpan.innerHTML=(d%4+1)+'/4';
+            }
+            function move() {
+                aBtn[0].onclick=null;
+                aBtn[1].onclick=move2;
+                d--;
+                var iI=0;
+                for(var i=aLi.length-1;i>=0;i--){
+                    iI++;
+                    aLi[i].style.webkitTransform='rotateX('+d%4*-90+'deg)';
+                    aLi[i].style.transform='rotateX('+d%4*-90+'deg)';
+                    aLi[i].style.transition='0.6s '+iI*40+'ms';
+                }
+                aLi[0].addEventListener('transitionend',function () {
+                    aBtn[0].onclick=move;
+                },false);
+                oSpan.innerHTML=(d%4+1)+'/4';
+            }
+            oBanner.onmouseover=function () {
+                clearInterval(oUl.time)
+            };
+            oBanner.onmouseout=function () {
+                clearInterval(oUl.time);
+                oUl.time=setInterval(move2,4000)
+            };
+            oUl.time=setInterval(move2,4000)
+        }
+    </script>
+</head>
+<body>
+<div id="header"></div>
+<div id="nav">
+    <ul>
+        <li><a href="javascript:">首页</a></li>
+        <li><a href="javascript:">幸福空间</a></li>
+        <li><a href="javascript:">在线商城</a></li>
+        <li><a href="javascript:">促销活动</a></li>
+        <li><a href="javascript:">红酒 ▪ 咖啡文化</a></li>
+        <li><a href="javascript:">休闲生活</a></li>
+        <li><a href="javascript:">新闻中心</a></li>
+    </ul>
+</div>
+<div id="banner">
+    <div id="btn"><button>＜</button><span>1/4</span><button>＞</button></div>
+    <ul class="clear">
+    </ul>
+</div>
+<div id="content1">
+    <div class="side">
+        <div class="culture clear">
+            <p>
+                <a href="">红酒</a>
+                <a href="">咖啡</a>
+                <span>文化专区</span>
+            </p>
+            <ul>
+                <li><a href="javascript:"> ▪ 葡萄酒的长期储藏是场冒险的游戏</a></li>
+                <li><a href="javascript:"> ▪ 葡萄酒的长期储藏是场冒险的游戏</a></li>
+                <li><a href="javascript:"> ▪ 葡萄酒的长期储藏是场冒险的游戏</a></li>
+                <li><a href="javascript:"> ▪ 葡萄酒的长期储藏是场冒险的游戏</a></li>
+                <li><a href="javascript:"> ▪ 葡萄酒的长期储藏是场冒险的游戏</a></li>
+                <li><a href="javascript:"> ▪ 葡萄酒的长期储藏是场冒险的游戏</a></li>
+            </ul>
+            <ul>
+                <li>咖啡区..............</li>
+                <li>咖啡区..............</li>
+                <li>咖啡区..............</li>
+                <li>咖啡区..............</li>
+                <li>咖啡区..............</li>
+                <li>咖啡区..............</li>
+            </ul>
+            <div class="one"><a href="">更多>></a></div>
+        </div>
+        <div class="ad">
+            <a href=""><img src="img/ad.png" alt="广告" title="促销产品"></a>
+            <div>
+                <b>促</b>
+            </div>
+            <p>幸福空间五一大放送|￥50元/包</p>
+        </div>
+        <div class="culture culture2 clear">
+            <div>
+                <b>相关新闻</b>
+                <a href="">更多>></a>
+            </div>
+            <ul>
+                <li><a href="javascript:"> ▪ 葡萄酒的长期储藏是场冒险的游戏</a></li>
+                <li><a href="javascript:"> ▪ 葡萄酒的长期储藏是场冒险的游戏</a></li>
+                <li><a href="javascript:"> ▪ 葡萄酒的长期储藏是场冒险的游戏</a></li>
+                <li><a href="javascript:"> ▪ 葡萄酒的长期储藏是场冒险的游戏</a></li>
+                <li><a href="javascript:"> ▪ 葡萄酒的长期储藏是场冒险的游戏</a></li>
+                <li><a href="javascript:"> ▪ 葡萄酒的长期储藏是场冒险的游戏</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <p>产品展示</p>
+        <div>
+            <b>红酒</b><a href="">更多>></a>
+            <ul>
+                <li><a href=""><img src="img/one.png" alt="产品图" title="蒙特罗-YH03"></a><p>蒙特罗-YH03</p></li>
+                <li><a href=""><img src="img/one.png" alt="产品图" title="蒙特罗-YH03"></a><p>蒙特罗-YH03</p></li>
+                <li><a href=""><img src="img/one.png" alt="产品图" title="蒙特罗-YH03"></a><p>蒙特罗-YH03</p></li>
+                <li><a href=""><img src="img/one.png" alt="产品图" title="蒙特罗-YH03"></a><p>蒙特罗-YH03</p></li>
+            </ul>
+        </div>
+        <div>
+            <b>咖啡</b><a href="">更多>></a>
+            <ul>
+                <li><a href=""><img src="img/two.png" alt="产品图" title="上岛咖啡-YH03"></a><p>上岛咖啡-YH03</p></li>
+                <li><a href=""><img src="img/two.png" alt="产品图" title="上岛咖啡-YH03"></a><p>上岛咖啡-YH03</p></li>
+                <li><a href=""><img src="img/two.png" alt="产品图" title="上岛咖啡-YH03"></a><p>上岛咖啡-YH03</p></li>
+                <li><a href=""><img src="img/two.png" alt="产品图" title="上岛咖啡-YH03"></a><p>上岛咖啡-YH03</p></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="content2">
+    <div class="L">
+        <div><b>健康生活</b><a href="">更多>></a></div>
+        <ul>
+            <li><a href="">烧烤会上混合型红葡萄酒搭配推荐</a></li>
+            <li><a href="">烧烤会上混合型红葡萄酒搭配推荐</a></li>
+            <li><a href="">烧烤会上混合型红葡萄酒搭配推荐</a></li>
+            <li><a href="">烧烤会上混合型红葡萄酒搭配推荐</a></li>
+            <li><a href="">烧烤会上混合型红葡萄酒搭配推荐</a></li>
+            <li><a href="">烧烤会上混合型红葡萄酒搭配推荐</a></li>
+            <li><a href="">烧烤会上混合型红葡萄酒搭配推荐</a></li>
+        </ul>
+    </div>
+    <div class="R">
+        <span>HOT</span>
+        <div class="wrap">
+            <div>
+                <a href=""><img src="img/hot.png" alt="" title="霞多丽白葡萄酒Chardonnay"></a>
+                <p><a href="">霞多丽白葡萄酒Chardonnay</a></p>
+                <ul>
+                    <li><b>酒庄</b>：南澳州（SA）</li>
+                    <li><b>来自</b>：澳大利亚</li>
+                    <li><b>年份</b>：2008</li>
+                    <li><b>价格</b>：￥120</li>
+                </ul>
+            </div>
+            <div>
+                <a href=""><img src="img/hot.png" alt="" title="霞多丽白葡萄酒Chardonnay"></a>
+                <p><a href="">霞多丽白葡萄酒Chardonnay</a></p>
+                <ul>
+                    <li><b>酒庄</b>：南澳州（SA）</li>
+                    <li><b>来自</b>：澳大利亚</li>
+                    <li><b>年份</b>：2008</li>
+                    <li><b>价格</b>：￥120</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer_nav">
+    <ul>
+        <li>
+            <a href="javascript:">首页</a>
+            <a href="javascript:">幸福空间</a>
+            <a href="javascript:">在线商城</a>
+            <a href="javascript:">促销活动</a>
+            <a href="javascript:">红酒 ▪ 咖啡文化</a>
+            <a href="javascript:">休闲生活</a>
+            <a href="javascript:">新闻中心</a>
+        </li>
+    </ul>
+</div>
+<div id="footer">
+    <h3>xxxxxxxxxxxxxxxxxxxxxxxxxxxx</h3>
+    <h4>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h4>
+</div>
+</body>
+</html>
