@@ -18,6 +18,11 @@
 				background: #ffffff !important;
 				border: none !important;
 			 }
+			 .maodian { display: inline-block; border: 2px solid #ccc; color: #ccc; 
+			 padding: 10px; border-radius: 50%; opacity: 0.5; position: fixed; bottom: 10%; right:1%;}
+			 .maodian:hover { text-decoration: none; opacity: 1; color: #ccc; }
+			 .maodian span { width:20px; height:20px; display: block; font-size: 20px; }
+			 
 			#myCarousel { margin-top: 50px !important; }
 			#myCarousel img { max-height: 500px;width:100%; margin: 0 auto;}
 			
@@ -54,7 +59,7 @@
 			#services .Center:nth-of-type(2) .row div:nth-of-type(2){ background: url(img/90.jpg) no-repeat; background-size:cover; }
 			#services .Center:nth-of-type(3) .row div:nth-of-type(1){ background: url(img/41.jpg) no-repeat; background-size:cover; }
 			#services .Center:nth-of-type(4) .row div:nth-of-type(1){ background: url(img/78.jpg) no-repeat; background-size:cover; }
-			.Amore { background: rgba(0,0,0,0) !important; display: block !important; max-width:100px ; margin:0 auto !impoetant; color: white;}
+			.Amore { background: rgba(0,0,0,0); display: block; max-width:100px ; margin:0 auto; color: white;}
 			.Amore:hover { background: white; color: #ccc; }
 			#services .Center h4 { font-size:17px; text-align: center; color: white; margin: 40px 0 20px 0; line-height: 35px; font-weight: 700;}
 			#services .Center p { font-size: 15px; text-align: center; color: white; }
@@ -136,7 +141,7 @@
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
-					<a href="#" class="navbar-brand"><img src="img/logo-3.png" alt="" /></a>
+					<a href="javascript:;" class="navbar-brand"><img src="img/logo-3.png" alt="" /></a>
 					<button class="navbar-toggle" type="button" data-toggle="collapse" 
     data-target="#navbar-collapse">
 						<span class="icon-bar"></span>
@@ -156,7 +161,9 @@
 			</div>
 		</nav>
 		
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<span id="maodian"></span>
+		
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">	
 		     <!--轮播（Carousel）指标 
 		    <ol class="carousel-indicators">
 		        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -231,11 +238,11 @@
 					</div>
 					<div class="col-md-5">
 						<div class="panel-heading">
-							<h4 class="panel-title" style="font-size: 20px;"><a href="#"> Exceptional Frontend Framework </a></h4>
+							<h4 class="panel-title" style="font-size: 20px;"><a href="javascript:;"> Exceptional Frontend Framework </a></h4>
 							<p class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 						</div>
-						<div class="panel-heading"><h4 class="panel-title"><a href="#"> Modern Design Trends </a></h4></div>
-						<div class="panel-heading"><h4 class="panel-title"><a href="#"> Beatifully Crafted Code </a></h4></div>
+						<div class="panel-heading"><h4 class="panel-title"><a href="javascript:;"> Modern Design Trends </a></h4></div>
+						<div class="panel-heading"><h4 class="panel-title"><a href="javascript:;"> Beatifully Crafted Code </a></h4></div>
 						
 						
 					</div>
@@ -251,7 +258,7 @@
 						<div class="row">
 							<div class="col-sm-6">
 								<h4>NOTHING IS IMPOSSIBLE FOR<br /> JANGO.HIGHLY FLEXIBLE, <br />ALWAYS GROWING</h4>
-								<a href="#" class="btn btn-default Amore">MORE</a>
+								<a href="javascript:;" class="btn btn-default Amore">MORE</a>
 							</div>
 							<div class="col-sm-6"></div>
 						</div>
@@ -261,7 +268,7 @@
 							<div class="col-sm-6">
 								<h4>WEB DESIGN</h4>
 								<p>Lorem ipsum consectetuer elit sit amet,<br /> sit adipiscing amet, coectetuer<br /> adipiscing elit sit ame.</p>
-								<a href="#" class="btn btn-default Amore">MORE</a>
+								<a href="javascript:;" class="btn btn-default Amore">MORE</a>
 							</div>
 							<div class="col-sm-6"></div>
 						</div>
@@ -271,7 +278,7 @@
 							<div class="col-sm-6"></div>
 							<div class="col-sm-6">
 								<h4 style="margin: 100px 0 30px 0;">LEARN MORE ABOUT JANGO</h4>
-								<a href="#" class="btn btn-default Amore">MORE</a>
+								<a href="javascript:;" class="btn btn-default Amore">MORE</a>
 							</div>
 						</div>
 					</div>
@@ -281,7 +288,7 @@
 							<div class="col-sm-6">
 								<h4>THE FUTURE</h4>
 								<p>Lorem ipsum dolor sit amet,<br /> consectetuer adipiscing elit, nonummy<br /> nibh euismod tincidunt.</p>
-								<a href="#" class="btn btn-default Amore">MORE</a>
+								<a href="javascript:;" class="btn btn-default Amore">MORE</a>
 							</div>
 						</div>
 					</div>
@@ -360,48 +367,48 @@
 			            <div class="caption">
 			                <h3>MODERN DESIGN TRENDS</h3>
 			                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, exerci tation suscipit ad minim veniam, exerci tation suscipit lobortis nisl ut aliquip ex ea commodo consequat exerci tation suscipit lobortis nisl ut laoreet dolore magna aliquam ut aliquip ex ea commodo consequat.</p>
-			                <p><a href="#" class="btn btn-primary" role="button"> EXPLORE </a></p>
+			                <p><a href="javascript:;" class="btn btn-primary" role="button"> EXPLORE </a></p>
 			            </div>
 			        </div>
                 </div>
                 
                 <div class="tab-pane" id="tab2">
                     <div class="thumbnail clearfix">
-			            <img src="img/3.jpg">
+			            <img src="img/4.jpg">
 			            <div class="caption">
 			                <h3>2222222</h3>
 			                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, exerci tation suscipit ad minim veniam, exerci tation suscipit lobortis nisl ut aliquip ex ea commodo consequat exerci tation suscipit lobortis nisl ut laoreet dolore magna aliquam ut aliquip ex ea commodo consequat.</p>
-			                <p><a href="#" class="btn btn-primary" role="button"> EXPLORE </a></p>
+			                <p><a href="javascript:;" class="btn btn-primary" role="button"> EXPLORE </a></p>
 			            </div>
 			        </div>
                 </div>
                 <div class="tab-pane" id="tab3">
                     <div class="thumbnail clearfix">
-			            <img src="img/3.jpg">
+			            <img src="img/5.jpg">
 			            <div class="caption">
 			                <h3>3333333</h3>
 			                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, exerci tation suscipit ad minim veniam, exerci tation suscipit lobortis nisl ut aliquip ex ea commodo consequat exerci tation suscipit lobortis nisl ut laoreet dolore magna aliquam ut aliquip ex ea commodo consequat.</p>
-			                <p><a href="#" class="btn btn-primary" role="button"> EXPLORE </a></p>
+			                <p><a href="javascript:;" class="btn btn-primary" role="button"> EXPLORE </a></p>
 			            </div>
 			        </div>
                 </div>
                 <div class="tab-pane" id="tab4">
                     <div class="thumbnail clearfix">
-			            <img src="img/3.jpg">
+			            <img src="img/6-1.jpg">
 			            <div class="caption">
 			                <h3>44444444</h3>
 			                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, exerci tation suscipit ad minim veniam, exerci tation suscipit lobortis nisl ut aliquip ex ea commodo consequat exerci tation suscipit lobortis nisl ut laoreet dolore magna aliquam ut aliquip ex ea commodo consequat.</p>
-			                <p><a href="#" class="btn btn-primary" role="button"> EXPLORE </a></p>
+			                <p><a href="javascript:;" class="btn btn-primary" role="button"> EXPLORE </a></p>
 			            </div>
 			        </div>
                 </div>
                 <div class="tab-pane" id="tab5">
                     <div class="thumbnail clearfix">
-			            <img src="img/3.jpg">
+			            <img src="img/6-2.jpg">
 			            <div class="caption">
 			                <h3>555555</h3>
 			                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, exerci tation suscipit ad minim veniam, exerci tation suscipit lobortis nisl ut aliquip ex ea commodo consequat exerci tation suscipit lobortis nisl ut laoreet dolore magna aliquam ut aliquip ex ea commodo consequat.</p>
-			                <p><a href="#" class="btn btn-primary" role="button"> EXPLORE </a></p>
+			                <p><a href="javascript:;" class="btn btn-primary" role="button"> EXPLORE </a></p>
 			            </div>
 			        </div>
                 </div>
@@ -583,7 +590,7 @@
 			</div>
 		</div>
 		
-		
+		<a href="#maodian" class="maodian"><span class="glyphicon glyphicon-arrow-up"></span></a>
 		<script src="jquery-3.2.1.js"></script>
 		<script src="bootstrap-3.3.7/dist/js/bootstrap.js"></script>
 	</body>
