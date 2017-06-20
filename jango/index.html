@@ -12,15 +12,15 @@
 			    font-family: "Roboto Condensed", sans-serif !important;
 			     }
 			     
-			     .line { display: inline-block; width:50px; height:3px; margin-bottom:35px;background: blue; }
+			     .line { display: inline-block; width:50px; height:3px; margin-bottom:35px;background: #5bc0de; }
 			     .title { text-align: center; margin-bottom: 10px; color: black; font-weight: 700; }
 			nav { 
 				background: #ffffff !important;
 				border: none !important;
 			 }
-			 .maodian { display: inline-block; border: 2px solid #ccc; color: #ccc; 
-			 padding: 10px; border-radius: 50%; opacity: 0.5; position: fixed; bottom: 10%; right:1%; z-index:9999;}
-			 .maodian:hover { text-decoration: none; opacity: 1; color: #ccc; }
+			 .maodian { display: inline-block; border: 2px solid #ccc; color: #ccc; padding: 10px; 
+			 border-radius: 50%; opacity: 0.5; position: fixed; bottom: 10%; right:1%; z-index: 9999;}
+			 .maodian:hover { text-decoration: none; opacity: 1; color: #ccc;  }
 			 .maodian span { width:20px; height:20px; display: block; font-size: 20px; }
 			 
 			#myCarousel { margin-top: 50px !important; }
@@ -40,6 +40,9 @@
 			.con-grey .layou:nth-of-type(2) { width:45%; background: white; padding: 25px; position: relative;z-index: 100; }
 			.con-grey .layou p {  position: relative;left:30px; z-index: 1000; }
 			.con-grey img { max-width:450px; max-height:350px;float: right; position: relative; z-index: 1;}
+			@media only screen and (max-width:550px ) {
+				.con-grey .layou:nth-of-type(1) { padding-top: 350px; }
+			}
 			
 			.panel-heading { padding:25px;margin:10px; background: white; color: black;}
 			.panel-heading .panel-body { margin-left:0; padding-left:0;}
@@ -76,7 +79,7 @@
 			
 			#main ul,#main ul li a { border:none;  }
 			#main ul { max-width:650px; margin:0 auto;}
-			#main ul li { margin:0 5px; }
+			#main ul li { margin:5px; }
 			#main ul a { width:100px; height:100px; font-size: 15px; color:#525e64;}
 			#main ul li .bg { margin-bottom:20px;width:55px; height:55px;display: inline-block; 
 			background-image: url(img/dark1.png); background-size: cover; }
@@ -109,7 +112,7 @@
 			padding: 60px 0; background-repeat: no-repeat;	}
 			.fixed-bg2>p { text-align: center;color: #ccc; margin-top:-10px;}
 			.fixed-bg2 .row .col-md-4 div { height:200px;padding:40px 60px;box-sizing: border-box; background: url(img);}
-			.fixed-bg2 .row div h4 { color: blue; }
+			.fixed-bg2 .row div h4 { color: #5bc0de; }
 			.fixed-bg2 .row div span { float:left;display: inline-block; width:45px; height:45px; margin-left:-60px;margin-top: 20px;
 			 background: no-repeat 80%; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 50%;}
 			
@@ -132,9 +135,23 @@
 			.div1 .content { padding: 30px; height:100%;}
 			.div1 .bg-white { background: #ffffff; }
 			.div1 .bg-primary h3 { margin-top:20%; line-height: 50px; }
-			.carousel .carousel-indicators { top:20px; left:80%; }
+			.carousel .carousel-indicators { top:20px; left:70% !important; }
 			.carousel .carousel-indicators li { border-color: #32c5d2 !important; }
 			.carousel .carousel-indicators .active { background-color:#32c5d2; }
+			
+			footer { background: black; padding: 50px 0; margin-top:50px; color: #FFFFFF;}
+			footer .col-sm-6 { height: 210px; }
+			footer ul { float: left; width:50%; list-style: none; height: 100%; }
+			footer .col-sm-6:nth-of-type(1) li{ height: 20%; }
+			footer .col-sm-6:nth-of-type(2) li{ height: 25%; }
+			footer .col-sm-6:nth-of-type(1) li a{ line-height: 50px; } 
+			footer .col-sm-6:nth-of-type(2) li a{ line-height: 2.5; } 
+			footer ul li { width:100%; }
+			footer ul li a { color: #FFFFFF;opacity: 0.6;display: inline-block;height: 100%; }
+			footer ul li a:hover { text-decoration: none; border-bottom: 1px dashed #ffffff; color:#ffffff;
+			 opacity: 1;}
+			footer  p { height:40px; }
+			
 		</style> 
 	</head>
 	<body>
@@ -367,7 +384,7 @@
 			            <div class="caption">
 			                <h3>MODERN DESIGN TRENDS</h3>
 			                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, exerci tation suscipit ad minim veniam, exerci tation suscipit lobortis nisl ut aliquip ex ea commodo consequat exerci tation suscipit lobortis nisl ut laoreet dolore magna aliquam ut aliquip ex ea commodo consequat.</p>
-			                <p><a href="javascript:;" class="btn btn-primary" role="button"> EXPLORE </a></p>
+			                <p><a href="javascript:;" class="btn btn-info" role="button"> EXPLORE </a></p>
 			            </div>
 			        </div>
                 </div>
@@ -378,7 +395,7 @@
 			            <div class="caption">
 			                <h3>2222222</h3>
 			                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, exerci tation suscipit ad minim veniam, exerci tation suscipit lobortis nisl ut aliquip ex ea commodo consequat exerci tation suscipit lobortis nisl ut laoreet dolore magna aliquam ut aliquip ex ea commodo consequat.</p>
-			                <p><a href="javascript:;" class="btn btn-primary" role="button"> EXPLORE </a></p>
+			                <p><a href="javascript:;" class="btn btn-info" role="button"> EXPLORE </a></p>
 			            </div>
 			        </div>
                 </div>
@@ -388,7 +405,7 @@
 			            <div class="caption">
 			                <h3>3333333</h3>
 			                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, exerci tation suscipit ad minim veniam, exerci tation suscipit lobortis nisl ut aliquip ex ea commodo consequat exerci tation suscipit lobortis nisl ut laoreet dolore magna aliquam ut aliquip ex ea commodo consequat.</p>
-			                <p><a href="javascript:;" class="btn btn-primary" role="button"> EXPLORE </a></p>
+			                <p><a href="javascript:;" class="btn btn-info" role="button"> EXPLORE </a></p>
 			            </div>
 			        </div>
                 </div>
@@ -398,7 +415,7 @@
 			            <div class="caption">
 			                <h3>44444444</h3>
 			                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, exerci tation suscipit ad minim veniam, exerci tation suscipit lobortis nisl ut aliquip ex ea commodo consequat exerci tation suscipit lobortis nisl ut laoreet dolore magna aliquam ut aliquip ex ea commodo consequat.</p>
-			                <p><a href="javascript:;" class="btn btn-primary" role="button"> EXPLORE </a></p>
+			                <p><a href="javascript:;" class="btn btn-info" role="button"> EXPLORE </a></p>
 			            </div>
 			        </div>
                 </div>
@@ -408,7 +425,7 @@
 			            <div class="caption">
 			                <h3>555555</h3>
 			                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, exerci tation suscipit ad minim veniam, exerci tation suscipit lobortis nisl ut aliquip ex ea commodo consequat exerci tation suscipit lobortis nisl ut laoreet dolore magna aliquam ut aliquip ex ea commodo consequat.</p>
-			                <p><a href="javascript:;" class="btn btn-primary" role="button"> EXPLORE </a></p>
+			                <p><a href="javascript:;" class="btn btn-info" role="button"> EXPLORE </a></p>
 			            </div>
 			        </div>
                 </div>
@@ -540,14 +557,14 @@
 						</div>
 					</div>
 					<div class="col-md-4">
-						<div class="content bg-primary">
-							<h3>JANGO没有什么是不可能的。高度灵活，总是在增长</h3>
+						<div class="content bg-info">
+							<h3 style="color: #ffffff;">JANGO没有什么是不可能的。高度灵活，总是在增长</h3>
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-8">
-						<!--<div id="carousel1" class="carousel slide" data-ride="carousel">
+						<div id="carousel1" class="carousel slide" data-ride="carousel">
 						    <ol class="carousel-indicators">
 						        <li data-target="#carousel1" data-slide-to="0" class="active"></li>
 						        <li data-target="#carousel1" data-slide-to="1"></li>
@@ -564,9 +581,9 @@
 						            <img src="img/32.jpg" alt="Third slide">
 						        </div>
 						    </div>
-						</div>-->
+						</div>
 					</div>
-					<!--<div class="col-md-4">
+					<div class="col-md-4">
 						<div id="carousel2" class="carousel slide" data-ride="carousel">
 						    <ol class="carousel-indicators">
 						        <li data-target="#carousel2" data-slide-to="0" class="active"></li>
@@ -581,10 +598,58 @@
 						        </div>
 						    </div>
 						</div>
-					</div>-->
+					</div>
 				</div>
 			</div>
 		</div>
+		
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<ul>
+							<li><a href="javascript:;">隐私政策</a></li>
+							<li><a href="javascript:;">隐私政策</a></li>
+							<li><a href="javascript:;">隐私政策</a></li>
+							<li><a href="javascript:;">隐私政策</a></li>
+							<li><a href="javascript:;">隐私政策</a></li>
+						</ul>
+						<ul>
+							<li><a href="javascript:;">关于Jango</a></li>
+							<li><a href="javascript:;">关于Jango</a></li>
+							<li><a href="javascript:;">关于Jango</a></li>
+							<li><a href="javascript:;">关于Jango</a></li>
+							<li><a href="javascript:;">关于Jango</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-6">
+						<div class="row">
+							<div class="col-xs-6">
+								<h4 style="padding-left: 10%; font-weight: 700;">友情链接</h4>
+								<ul style="width: 100%;">
+									<li><a href="http://www.baidu.com">百度</a></li>
+									<li><a href="http://www.baidu.com">百度</a></li>
+									<li><a href="http://www.baidu.com">百度</a></li>
+									<li><a href="http://www.baidu.com">百度</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-6">
+								<h4 style="font-weight: 700;">联系我们</h4>
+								<p>电话：<strong>1470000000</strong></p>
+								<p>Email: <strong>aaaaa@163.com</strong></p>
+								<a href="javascript:;" class="navbar-brand"><img src="img/logo-3.png" alt="" /></a>
+							</div>
+						</div>
+					</div>
+					<!--<div class="col-sm-4" style=" height:210px">
+						<h4 style="margin-top:-30px;text-align: center;">联系我们</h4>
+						<p>电话：<strong>1470000000</strong></p>
+						<p>Email: <strong>aaaaaa@163.com</strong></p>
+						<a href="javascript:;" class="navbar-brand" style="bottom: 0;"><img src="img/logo-3.png" alt="" /></a>
+					</div>-->
+				</div>
+			</div>
+		</footer>
 		
 		<a href="#maodian" class="maodian"><span class="glyphicon glyphicon-arrow-up"></span></a>
 		<script src="jquery-3.2.1.js"></script>
