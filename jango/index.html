@@ -37,14 +37,18 @@
 			
 			.con-grey { padding: 40px 0; background:#f7f7f7;}
 			.con-grey .layou:nth-of-type(1) { margin:30px 0;  }
-			.con-grey .layou:nth-of-type(2) { width:45%; background: white; padding: 25px; position: relative;z-index: 100; }
-			.con-grey .layou p {  position: relative;left:30px; z-index: 1000; }
+			.con-grey .layou:nth-of-type(2) { width:45%; background: white; padding: 20px; position: relative;z-index: 100; }
+			.con-grey .layou p {position: relative;left:30px;}
 			.con-grey img { max-width:450px; max-height:350px;float: right; position: relative; z-index: 1;}
 			@media only screen and (max-width:550px ) {
 				.con-grey .layou:nth-of-type(1) { padding-top: 350px; }
+				.con-grey .layou:nth-of-type(2) { padding:5px; width:100%; }
+				.con-grey .layou p { left:0; }
 			}
 			
 			.panel-heading { padding:25px;margin:10px; background: white; color: black;}
+			.panel-heading-1 { padding: 0 25px; height:60px; }
+			.panel-heading-1 h4,.panel-heading-1 h4 a { display: block; height: 100%; line-height: 60px; }
 			.panel-heading .panel-body { margin-left:0; padding-left:0;}
 			.panel-heading:hover { background: #5bc0de; color: white; }
 			.panel-heading a:hover { text-decoration: none; }
@@ -58,11 +62,11 @@
 			#services .Center:nth-of-type(2){ background:#7a6a61; }
 			#services .Center:nth-of-type(3){ background:#e7505a; }
 			#services .Center:nth-of-type(4){ background:#57bfe1; }
-			#services .Center:nth-of-type(1) .row div:nth-of-type(2){ background: url(img/79.jpg) no-repeat; background-size:cover; }
-			#services .Center:nth-of-type(2) .row div:nth-of-type(2){ background: url(img/90.jpg) no-repeat; background-size:cover; }
-			#services .Center:nth-of-type(3) .row div:nth-of-type(1){ background: url(img/41.jpg) no-repeat; background-size:cover; }
-			#services .Center:nth-of-type(4) .row div:nth-of-type(1){ background: url(img/78.jpg) no-repeat; background-size:cover; }
-			.Amore { background: rgba(0,0,0,0) !important; display: block; max-width:100px ; margin:0 auto !important; color: white;}
+			#services .Center:nth-of-type(1) .row div:nth-of-type(2){ background: url(img/79.jpg) no-repeat; background-size:100% 100%; }
+			#services .Center:nth-of-type(2) .row div:nth-of-type(2){ background: url(img/90.jpg) no-repeat; background-size:100% 100%; }
+			#services .Center:nth-of-type(3) .row div:nth-of-type(1){ background: url(img/41.jpg) no-repeat; background-size:100% 100%; }
+			#services .Center:nth-of-type(4) .row div:nth-of-type(1){ background: url(img/78.jpg) no-repeat; background-size:100% 100%; }
+			.Amore { background: rgba(0,0,0,0) !important; display: block !important; max-width:100px ; margin:0 auto !important; color: white;}
 			.Amore:hover { background: white; color: #ccc; }
 			#services .Center h4 { font-size:17px; text-align: center; color: white; margin: 40px 0 20px 0; line-height: 35px; font-weight: 700;}
 			#services .Center p { font-size: 15px; text-align: center; color: white; }
@@ -141,11 +145,11 @@
 			
 			footer { background: black; padding: 50px 0; margin-top:50px; color: #FFFFFF;}
 			footer .col-sm-6 { height: 210px; }
-			footer ul { float: left; width:50%; list-style: none; height: 100%; }
 			footer .col-sm-6:nth-of-type(1) li{ height: 20%; }
 			footer .col-sm-6:nth-of-type(2) li{ height: 25%; }
 			footer .col-sm-6:nth-of-type(1) li a{ line-height: 50px; } 
 			footer .col-sm-6:nth-of-type(2) li a{ line-height: 2.5; } 
+			footer ul { float: left; width:50%; list-style: none; height: 100%; }
 			footer ul li { width:100%; }
 			footer ul li a { color: #FFFFFF;opacity: 0.6;display: inline-block;height: 100%; }
 			footer ul li a:hover { text-decoration: none; border-bottom: 1px dashed #ffffff; color:#ffffff;
@@ -242,7 +246,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-7">
-						<img src="img/jango-intro-2.jpg" alt="电脑图" />
+						<img src="img/jango-intro-2.jpg" alt="电脑图"/>
 						<div class="layou">
 							<h3>WHY<br />JANGO?</h3>
 						</div>
@@ -251,15 +255,14 @@
 							<p>JANGO is the ultimate tool to power any of your projects. Corporate, ecommerce, SAAS, CRM and much more.</p>
 						</div>
 						<button class="btn btn-info btn-lg">EXPLORE</button>
-						
 					</div>
 					<div class="col-md-5">
 						<div class="panel-heading">
 							<h4 class="panel-title" style="font-size: 20px;"><a href="javascript:;"> Exceptional Frontend Framework </a></h4>
 							<p class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 						</div>
-						<div class="panel-heading"><h4 class="panel-title"><a href="javascript:;"> Modern Design Trends </a></h4></div>
-						<div class="panel-heading"><h4 class="panel-title"><a href="javascript:;"> Beatifully Crafted Code </a></h4></div>
+						<div class="panel-heading panel-heading-1"><h4 class="panel-title"><a href="javascript:;"> Modern Design Trends </a></h4></div>
+						<div class="panel-heading panel-heading-1"><h4 class="panel-title"><a href="javascript:;"> Beatifully Crafted Code </a></h4></div>
 						
 						
 					</div>
@@ -641,16 +644,9 @@
 							</div>
 						</div>
 					</div>
-					<!--<div class="col-sm-4" style=" height:210px">
-						<h4 style="margin-top:-30px;text-align: center;">联系我们</h4>
-						<p>电话：<strong>1470000000</strong></p>
-						<p>Email: <strong>aaaaaa@163.com</strong></p>
-						<a href="javascript:;" class="navbar-brand" style="bottom: 0;"><img src="img/logo-3.png" alt="" /></a>
-					</div>-->
 				</div>
 			</div>
 		</footer>
-		
 		<a href="#maodian" class="maodian"><span class="glyphicon glyphicon-arrow-up"></span></a>
 		<script src="jquery-3.2.1.js"></script>
 		<script src="bootstrap-3.3.7/dist/js/bootstrap.js"></script>
